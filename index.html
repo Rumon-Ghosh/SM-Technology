@@ -19,9 +19,17 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <style>
-      .inter-font {
+      .inter {
         font-family: "Inter", sans-serif;
         font-weight: 400;
         font-style: normal;
@@ -35,23 +43,101 @@
     </style>
   </head>
   <body>
-    <header class="border-b-2 border-blue-500">
-      <nav class="flex justify-between items-center py-4 max-w-[1200px] mx-auto">
-        <div>
-          <img class="w-[113px]" src="/images/logo.png" alt="">
-        </div>
-        <div class="flex flex-col md:flex-row gap-2 items-center">
-          <a class="p-2" href="#">Home</a>
-          <a class="p-2" href="#">About us</a>
-          <a class="p-2" href="#">FAQ</a>
-          <a class="p-2" href="#">Gallery</a>
-          <button class="py-2 px-3 border rounded-md text-[#00C7B4] cursor-pointer">Contact us</button>
+    <header class="border-b-2 border-blue-500 relative">
+      <nav class="max-w-[1200px] mx-auto px-4 py-4 poppins-font">
+        <div class="flex items-center justify-between">
+          <img class="w-[113px]" src="/images/logo.png" alt="Logo" />
+
+          <button
+            id="menuToggle"
+            class="md:hidden p-2 text-xl"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <div class="hidden md:flex gap-2 items-center">
+            <a class="p-2" href="#">Home</a>
+            <a class="p-2" href="#">About us</a>
+            <a class="p-2" href="#">FAQ</a>
+            <a class="p-2" href="#">Gallery</a>
+            <button
+              class="py-2 px-3 ml-2 border rounded-md text-[#00C7B4] cursor-pointer"
+            >
+              Contact us
+            </button>
+          </div>
         </div>
       </nav>
+
+      <div
+        id="mobileMenu"
+        class="md:hidden absolute right-0 -top-[320px] w-full bg-white border-t border-blue-100 px-4 py-3 flex flex-col items-start gap-1 transition-all duration-300"
+      >
+        <a class="py-2" href="#">Home</a>
+        <a class="py-2" href="#">About us</a>
+        <a class="py-2" href="#">FAQ</a>
+        <a class="py-2" href="#">Gallery</a>
+        <button
+          class="mt-2 py-2 px-3 ml-2 border rounded-md text-[#00C7B4] cursor-pointer"
+        >
+          Contact us
+        </button>
+      </div>
     </header>
+
     <main>
-      
+      <!-- hero section -->
+      <section
+        class="max-w-[1200px] mx-auto"
+      >
+        <div class="py-20 flex flex-col-reverse md:flex-row items-center bg-[#E5FFFD]">
+          <div class="flex-4">
+            <h1 class="text-[56px]/14 font-bold mb-2">
+              YOUR <span class="text-[#00C7B4]">HIGH-MOVING</span> INSURANCE SOLUTION
+            </h1>
+            <p class="w-[567px] md:mx-auto mb-4">
+              Lorem ipsum dolor sit amet consectetur. Lobortis massa urna
+              dapibus amet massa ullamcorper eget facilisi. Velit ultricies.
+            </p>
+            <button class="btn bg-[#00C7B4] text-white">Book Now</button>
+          </div>
+          <div class="grid grid-cols-2 grid-rows-5 gap-5 h-[500px] flex-3">
+            <div class="row-span-3">
+              <img
+                class="h-full w-full object-cover rounded-md"
+                src="./images/banner-1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="row-span-2">
+              <img
+                class="w-full h-full object-cover rounded-md"
+                src="./images/banner-2.jpg"
+                alt=""
+              />
+            </div>
+            <div class="row-span-3">
+              <img
+                class="w-full h-full object-cover rounded-md"
+                src="./images/banner-4.jpg"
+                alt=""
+              />
+            </div>
+            <div class="row-span-2">
+              <img
+                class="w-full h-full object-cover rounded-md"
+                src="./images/banner-3.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
