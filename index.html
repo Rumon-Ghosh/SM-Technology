@@ -31,19 +31,18 @@
     <style>
       .inter {
         font-family: "Inter", sans-serif;
-        font-weight: 400;
         font-style: normal;
       }
 
       .poppins-font {
         font-family: "Poppins", sans-serif;
-        font-weight: 400;
         font-style: normal;
       }
     </style>
   </head>
   <body>
-    <header class="border-b-2 border-blue-500 relative">
+    <!-- navbar -->
+    <header class="border-b-2 border-blue-500 sticky top-0 z-50 bg-[white]">
       <nav class="max-w-[1200px] mx-auto px-4 py-4 poppins-font">
         <div class="flex items-center justify-between">
           <img class="w-[113px]" src="/images/logo.png" alt="Logo" />
@@ -63,7 +62,7 @@
             <a class="p-2" href="#">FAQ</a>
             <a class="p-2" href="#">Gallery</a>
             <button
-              class="py-2 px-3 ml-2 border rounded-md text-[#00C7B4] cursor-pointer"
+              class="py-2 px-3 md:ml-2 border rounded-md text-[#00C7B4] cursor-pointer"
             >
               Contact us
             </button>
@@ -80,7 +79,7 @@
         <a class="py-2" href="#">FAQ</a>
         <a class="py-2" href="#">Gallery</a>
         <button
-          class="mt-2 py-2 px-3 ml-2 border rounded-md text-[#00C7B4] cursor-pointer"
+          class="mt-2 py-2 px-3 md:ml-2 border rounded-md text-[#00C7B4] cursor-pointer"
         >
           Contact us
         </button>
@@ -90,20 +89,22 @@
     <main>
       <!-- hero section -->
       <section
-        class="max-w-[1200px] mx-auto"
+        class="py-20 bg-[#E5FFFD]"
       >
-        <div class="py-20 flex flex-col-reverse md:flex-row items-center bg-[#E5FFFD]">
-          <div class="flex-4">
-            <h1 class="text-[56px]/14 font-bold mb-2">
+        <div class="flex flex-col-reverse md:flex-row items-center gap-12 max-w-[1200px] mx-auto">
+          <div class="flex-1 md:flex-4">
+            <h1 class="inter text-[32px] md:text-[56px]/14 font-black mb-2 text-center md:text-start">
               YOUR <span class="text-[#00C7B4]">HIGH-MOVING</span> INSURANCE SOLUTION
             </h1>
-            <p class="w-[567px] md:mx-auto mb-4">
+            <p class="max-w-[567px] mx-auto md:mx-0 mb-4 text-center md:text-start poppins-font text-[#374151]">
               Lorem ipsum dolor sit amet consectetur. Lobortis massa urna
               dapibus amet massa ullamcorper eget facilisi. Velit ultricies.
             </p>
-            <button class="btn bg-[#00C7B4] text-white">Book Now</button>
+            <div class="text-center md:text-start">
+              <button class="btn bg-[#00C7B4] text-white font-bold">Book Now</button>
+            </div>
           </div>
-          <div class="grid grid-cols-2 grid-rows-5 gap-5 h-[500px] flex-3">
+          <div class="grid grid-cols-2 grid-rows-5 gap-5 h-[500px] flex-1 md:flex-3">
             <div class="row-span-3">
               <img
                 class="h-full w-full object-cover rounded-md"
@@ -134,7 +135,37 @@
             </div>
           </div>
         </div>
+        <p class="max-w-[1200px] text-center mx-auto md:text-2xl font-medium poppins-font text-[#374151] mt-8 md:mt-12">Lorem ipsum dolor sit amet consectetur. Ornare in imperdiet integer integer felis et aliquam elit dolor. Diam etiam quis feugiat facilisi malesuada proin ac ac. Amet auctor diam consequat odio in molestie fringilla. Luctus suspendisse amet semper tellus molestie vivamus quis </p>
       </section>
+      <!-- partner with us section -->
+       <section class="max-w-[1200px] mx-auto py-20 flex flex-col md:flex-row items-center gap-12">
+        <!-- right side -->
+        <div class="h-[541px] flex-1">
+          <img class="rounded-lg h-full object-cover" src="./images/Rectangle 16.png" alt="">
+        </div>
+        <!-- left side -->
+        <div class="poppins-font space-y-4 flex-1">
+          <h2 class="font-bold text-[32px]">Whey <span class="text-[#00C7B4]">partner with</span> us ?</h2>
+          <div class="w-[57px] border-2 border-[#00C7B4]"></div>
+          <p class="text-[#374151]">Lorem ipsum dolor sit amet consectetur. Lobortis massa urna dapibus amet massa ullamcorper eget facilisi. Velit ultricies.</p>
+          <div class="flex gap-4">
+            <img class="w-6 h-6" src="./images/Frame.png" alt="">
+            <p class="text-[#374151]">Lorem ipsum dolor sit amet consectetur. Lobortis massa urna dapibus amet massa ullamcorper eget facilisi</p>
+          </div>
+          <div class="flex gap-4">
+            <img class="w-6 h-6" src="./images/Frame.png" alt="">
+            <p class="text-[#374151]">Lorem ipsum dolor sit amet consectetur. Lobortis massa urna dapibus amet massa ullamcorper eget facilisi</p>
+          </div>
+          <div class="flex gap-4">
+            <img class="w-6 h-6" src="./images/Frame.png" alt="">
+            <p class="text-[#374151]">Lorem ipsum dolor sit amet consectetur. Lobortis massa urna dapibus amet massa ullamcorper eget facilisi</p>
+          </div>
+          <div class="flex gap-4">
+            <img class="w-6 h-6" src="./images/Frame.png" alt="">
+            <p class="text-[#374151]">Lorem ipsum dolor sit amet consectetur. Lobortis massa urna dapibus amet massa ullamcorper eget facilisi</p>
+          </div>
+        </div>
+       </section>
     </main>
     <footer></footer>
 
