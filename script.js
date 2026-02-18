@@ -15,7 +15,8 @@ if (menuToggle && mobileMenu) {
         button.addEventListener('click', function (e) {
           e.preventDefault();
           if (typeof Calendly !== 'undefined') {
-            Calendly.initPopupWidget({ url: 'https://calendly.com' });
+            window.open('https://calendar.app.google/TfmskzuPvEWdURsB7', '_blank');
+            // Calendly.initPopupWidget({ url: 'https://calendly.com' });
           } else {
             console.error('Calendly script not loaded yet.');
             alert('Booking system is loading. Please try again in a moment.');
