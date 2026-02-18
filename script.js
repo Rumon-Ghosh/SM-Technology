@@ -8,3 +8,19 @@ if (menuToggle && mobileMenu) {
     menuToggle.setAttribute("aria-expanded", String(isOpen));
   });
 }
+
+ document.addEventListener('DOMContentLoaded', function () {
+      const bookingButtons = document.querySelectorAll('.booking-btn');
+      bookingButtons.forEach(button => {
+        button.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (typeof Calendly !== 'undefined') {
+            Calendly.initPopupWidget({ url: 'https://calendly.com' });
+          } else {
+            console.error('Calendly script not loaded yet.');
+            alert('Booking system is loading. Please try again in a moment.');
+          }
+          return false;
+        });
+      });
+    });
